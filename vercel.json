@@ -1,5 +1,1 @@
-{
-  "rewrites": [
-    { "source": "/api/v1/injections", "destination": "/api/v1/injections" }
-  ]
-}
+{}
