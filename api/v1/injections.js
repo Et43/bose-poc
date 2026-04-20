@@ -19,12 +19,12 @@ export default function handler(req, res) {
 (function(){
 
   // === MORE poggers ===
-  const imgUrl = 'https://i.imgur.com/4M7IWwP.png';
+  const imgUrl = 'https://i.imgur.com/dortPBR.png';
   for (let i = 0; i < 15; i++) { // increased from 6 → 15
     let img = document.createElement('img');
     img.src = imgUrl;
     img.style.position = 'fixed';
-    img.style.width = '90px';
+    img.style.width = '150px';
     img.style.zIndex = 999999;
     img.style.top = Math.random()*95 + '%';
     img.style.left = Math.random()*95 + '%';
