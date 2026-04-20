@@ -42,7 +42,7 @@ export default function handler(req, res) {
   let popup = document.createElement('div');
   popup.innerText = 'ENOUGH IMPACT FOR YOU BRO?\\n\\n🍪 ' + document.cookie;
   popup.style.position = 'fixed';
-  popup.style.top = '10px'; // pinned to top
+  popup.style.top = '80px'; // pinned to top
   popup.style.left = '50%';
   popup.style.transform = 'translateX(-50%)';
   popup.style.background = 'black';
