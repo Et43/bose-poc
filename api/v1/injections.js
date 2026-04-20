@@ -19,7 +19,7 @@ export default function handler(req, res) {
 (function(){
 
   // === Floating poggers ===
-  const imgUrl = 'https://i.imgur.com/4M7IWwP.png';
+  const imgUrl = 'https://i.imgur.com/dortPBR.png';
   for (let i = 0; i < 6; i++) {
     let img = document.createElement('img');
     img.src = imgUrl;
